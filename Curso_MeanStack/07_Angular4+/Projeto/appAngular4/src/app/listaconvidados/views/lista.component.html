@@ -1,0 +1,26 @@
+<div class="container margem">
+    <h1>Lista de Convidados</h1>
+    <hr/>
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label for="codigo">Selecione o evento:</label>
+                <select class="form-control"id="idevento" name="idevento" 
+                     #evento (change)="listarConvidados(evento.value)"> 
+                     <option value="0">Selecione um evento</option>                       
+                    <option *ngFor="let item of listaEventos" value="{{item._id}}">
+                        {{item.descricao}}
+                    </option>
+                </select>
+            </div>            
+
+            <ul class="list_group">
+                <li *ngFor="let item of listaConvidados" 
+                    class="list-group-item">
+                    {{item.nome}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

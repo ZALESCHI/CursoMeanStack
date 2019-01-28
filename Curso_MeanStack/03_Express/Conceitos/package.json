@@ -1,0 +1,12 @@
+{
+  "name": "conceitos",
+  "version": "1.0.0",
+  "description": "Exemplo de gerenciador de pacotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exec": "node main.js"
+  },
+  "author": "Emilio",
+  "license": "ISC"
+}

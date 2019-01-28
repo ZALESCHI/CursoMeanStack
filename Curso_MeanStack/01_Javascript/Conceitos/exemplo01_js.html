@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo 01</title>
+    <script>
+        function exibir(){
+            //obtendo os dados dos campos de entrada
+            var v_nome = document.getElementById('nome').value;
+            var v_idade = document.getElementById('idade').value;
+
+            //criando a mensagem
+            var mensagem = "Nome = " + v_nome +
+                           "\nIdade = " + v_idade;
+            
+            if(v_idade < 18){
+                mensagem += "\nMenor de Idade" ;
+            } else if(v_idade == "18") {
+                mensagem += "\nPossui exatamente 18 anos";
+            } else {
+                mensagem += "\nMaior de 18 anos";
+            }
+
+            //exibindo a mensagem
+            alert(mensagem);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label>Nome:</label><br/>
+        <input type="text" id="nome" /><br/>
+
+        <label>Idade:</label><br/>
+        <input type="text" id="idade" /><br/>
+        <input type="button" value="Enviar" 
+            onclick="exibir()" />
+    </div>
+</body>
+</html>

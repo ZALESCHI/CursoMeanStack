@@ -1,0 +1,21 @@
+<div>
+    <h2>Conheça nossa lista de eventos</h2>
+    <div ng-controller="EventosController as ec">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="evento in ec.eventos">
+                    <td>{{evento.descricao}}</td>
+                    <td>{{evento.data}}</td>
+                    <td>{{evento.preco}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

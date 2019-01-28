@@ -1,0 +1,45 @@
+<div class="container margem">
+    <h1>Cadastro de Convidados</h1>
+    <hr/>
+    <div class="row">
+
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="descricao" class="control-label col-md-3">Evento:</label>
+                <div class="col-md-8">
+                    <select class="form-control" id="idevento" name="idevento" [(ngModel)]="convidadoSelecionado.idevento">                        
+                        <option *ngFor="let item of listaEventos" value="{{item._id}}">
+                            {{item.descricao}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cpf" class="control-label col-md-3">Cpf do Convidado:</label>
+                <div class="col-md-7">
+                    <input type="text" [(ngModel)]="convidadoSelecionado.cpf" class="form-control" id="cpf" name="cpf">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nome" class="control-label col-md-3">Nome do Convidado:</label>
+                <div class="col-md-9">
+                    <input type="text" [(ngModel)]="convidadoSelecionado.nome" class="form-control" id="nome" name="nome">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="control-label col-md-3">Email do Convidado:</label>
+                <div class="col-md-9">
+                    <input type="email" [(ngModel)]="convidadoSelecionado.email" class="form-control" id="email" name="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" (click)="incluir(convidadoSelecionado)" class="btn btn-info">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    Incluir Convidado
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
